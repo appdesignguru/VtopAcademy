@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph.xml"
+    app:startDestination="@+id/authenticationCheckFragment">
+
+    <fragment
+        android:id="@+id/authenticationCheckFragment"
+        android:name="com.vtopacademy.fragments.AuthenticationCheckFragment"
+        android:label=""
+        tools:layout="@layout/fragment_authentication_check">
+        <action
+            android:id="@+id/action_authenticationCheckFragment_to_registrationEmailFragment"
+            app:destination="@id/registrationEmailFragment"/>
+        <action
+            android:id="@+id/action_authenticationCheckFragment_to_categoryListFragment"
+            app:destination="@id/categoryListFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryListFragment"
+        android:name="com.vtopacademy.fragments.CategoryListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_category_list">
+        <action
+            android:id="@+id/action_categoryListFragment_to_subjectListFragment"
+            app:destination="@id/subjectListFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/subjectListFragment"
+        android:name="com.vtopacademy.fragments.SubjectListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_subject_list">
+        <action
+            android:id="@+id/action_subjectListFragment_to_topicListFragment"
+            app:destination="@id/topicListFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/topicListFragment"
+        android:name="com.vtopacademy.fragments.TopicListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_topic_list">
+        <action
+            android:id="@+id/action_topicListFragment_to_videoListFragment"
+            app:destination="@id/videoListFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/videoListFragment"
+        android:name="com.vtopacademy.fragments.VideoListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_video_list">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationEmailFragment"
+        android:name="com.vtopacademy.fragments.RegistrationEmailFragment"
+        android:label=""
+        tools:layout="@layout/fragment_registration_email">
+        <action
+            android:id="@+id/action_registrationEmailFragment_to_registrationEmailVerificationFragment"
+            app:destination="@id/registrationEmailVerificationFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationEmailVerificationFragment"
+        android:name="com.vtopacademy.fragments.RegistrationEmailVerificationFragment"
+        android:label=""
+        tools:layout="@layout/fragment_registration_email_verification">
+        <action
+            android:id="@+id/action_registrationEmailVerificationFragment_to_registrationDetailsFragment"
+            app:destination="@id/registrationDetailsFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationDetailsFragment"
+        android:name="com.vtopacademy.fragments.RegistrationDetailsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_registration_details">
+        <action
+            android:id="@+id/action_registrationDetailsFragment_to_loginAutomationFragment"
+            app:destination="@id/loginAutomationFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginAutomationFragment"
+        android:name="com.vtopacademy.fragments.LoginAutomationFragment"
+        android:label=""
+        tools:layout="@layout/fragment_login_automation">
+        <action
+            android:id="@+id/action_loginAutomationFragment_to_categoryListFragment"
+            app:destination="@id/categoryListFragment"/>
+        <action
+            android:id="@+id/action_loginAutomationFragment_to_loginFragment"
+            app:destination="@id/loginFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.vtopacademy.fragments.LoginFragment"
+        android:label=""
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_categoryListFragment"
+            app:destination="@id/categoryListFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordEmailFragment"
+        android:name="com.vtopacademy.fragments.ForgotPasswordEmailFragment"
+        android:label=""
+        tools:layout="@layout/fragment_forgot_password_email">
+        <action
+            android:id="@+id/action_forgotPasswordEmailFragment_to_forgotPasswordEmailVerificationFragment"
+            app:destination="@id/forgotPasswordEmailVerificationFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordEmailVerificationFragment"
+        android:name="com.vtopacademy.fragments.ForgotPasswordEmailVerificationFragment"
+        android:label=""
+        tools:layout="@layout/fragment_forgot_password_email_verification">
+        <action
+            android:id="@+id/action_forgotPasswordEmailVerificationFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.vtopacademy.fragments.ResetPasswordFragment"
+        android:label=""
+        tools:layout="@layout/fragment_reset_password">
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_loginAutomationFragment"
+            app:destination="@id/loginAutomationFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/ChangePasswordFragment"
+        android:name="com.vtopacademy.fragments.ChangePasswordFragment"
+        android:label=""
+        tools:layout="@layout/fragment_reset_password">
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_loginAutomationFragment"
+            app:destination="@id/loginAutomationFragment"/>
+    </fragment>
+
+</navigation>
